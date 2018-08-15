@@ -1,0 +1,55 @@
+.swiper {
+  height: 200px;
+}
+
+.slide-img {
+  height: 200px;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+}
+
+.controls {
+  position: relative;
+  top: 80%;
+  height: 50px;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  margin-left: 6px;
+}
+
+.search {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-left {
+  width: 55%;
+  margin-right: 30px;
+}
+
+.search-input {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  line-height: 30px;
+  border: 1px solid #6e6e6e;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #6e6e6e;
+}
+
+.search-button {
+  width: 60px;
+  height: 30px;
+  font-size: 12px;
+}

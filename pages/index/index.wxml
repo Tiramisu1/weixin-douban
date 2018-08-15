@@ -1,0 +1,93 @@
+<!-- 顶部搜索 -->
+<view class='header'>
+  <view class='header-search'>
+    <navigator url='../search/search' hover-class='none'>
+      <icon type='search' size='15' class='search-icon'></icon>
+      <input placeholder='搜索' disabled class='search-text'></input>
+    </navigator>
+  </view>
+</view>
+<!-- 正在热映 -->
+<view class='lately'>
+  <view class='lately-header'>
+    <navigator url="../list/list?type=in_theaters&title=正在热映" hover-class='none'>
+      <view class='lately-left'>
+        <text>正在热映</text>{{message}}
+      </view>
+      <view class='lately-right'>
+        <text class='more-text'>更多</text>
+        <image src='../../images/more.png' class='more'></image>
+      </view>
+    </navigator>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <view wx:for='{{hotList}}' wx:key='item.id' class='scroll-item'>
+      <navigator url='../item/item?id={{ item.id }}' hover-class='none'>
+        <view class='scroll-box'>
+          <image src='{{item.images.small}}' class='scroll-img'></image>
+          <text class='scroll-text'>{{item.title}}</text>
+          <import src="../../public/star.wxml" />
+          <view>
+            <template is="starsTemplate" data="{{stars: item.stars, score: item.score}}" />
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+<!-- 即将上映 -->
+<view class='lately'>
+  <view class='lately-header'>
+    <navigator url='../list/list?type=coming_soon&title=即将上映' hover-class='none'>
+      <view class='lately-left'>
+        <text>即将上映</text>{{message}}
+      </view>
+      <view class='lately-right'>
+        <text class='more-text'>更多</text>
+        <image src='../../images/more.png' class='more'></image>
+      </view>
+    </navigator>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <view wx:for='{{soonList}}' wx:key='item.id' class='scroll-item'>
+      <navigator url='../item/item?id={{item.id}}' hover-class='none'>
+        <view class='scroll-box'>
+          <image src='{{item.images.small}}' class='scroll-img'></image>
+          <text class='scroll-text'>{{item.title}}</text>
+          <import src="../../public/star.wxml" />
+          <view>
+            <template is="starsTemplate" data="{{stars: item.stars, score: item.score}}" />
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+<!-- top250 -->
+<view class='lately'>
+  <view class='lately-header'>
+    <navigator url='../list/list?type=top250&title=top250' hover-class='none'>
+      <view class='lately-left'>
+        <text>top250</text>{{message}}
+      </view>
+      <view class='lately-right'>
+        <text class='more-text'>更多</text>
+        <image src='../../images/more.png' class='more'></image>
+      </view>
+    </navigator>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <view wx:for='{{topList}}' wx:key='item.name' class='scroll-item'>
+      <navigator url='../../item/item?id={{item.id}}' hover-class='none'>
+        <view class='scroll-box'>
+          <image src='{{item.images.small}}' class='scroll-img'></image>
+          <text class='scroll-text'>{{item.title}}</text>
+          <import src="../../public/star.wxml" />
+          <view>
+            <template is="starsTemplate" data="{{stars: item.stars, score: item.score}}" />
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>

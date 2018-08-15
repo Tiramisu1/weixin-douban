@@ -1,0 +1,52 @@
+@import "../common/movie-list.wxss";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  background-color: #090;
+}
+
+.header-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 88%;
+  height: 60rpx;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.search-icon {
+  margin: 0 10rpx;
+}
+
+.search-text {
+  width: 98%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 14px;
+  color: #999;
+}
+
+.placeholder {
+  font-size: 14px;
+}
+
+.clear {
+  line-height: 60rpx;
+  font-size: 14px;
+  color: #fff;
+}
+
+.warning {
+  margin: 30rpx;
+  text-align: center;
+  font-size: 14px;
+  color: #666
+}
+.movie{
+  display: flex;
+  flex-direction: column;
+}

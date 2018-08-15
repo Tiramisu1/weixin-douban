@@ -1,0 +1,18 @@
+<template name='movie-list'>
+  <view wx:for="{{movieList}}" wx:key='item.id'>
+    <navigator url='../item/item?id={{item.id}}' hover-class='none' class='movie-item'>
+      <image src='{{item.images.small}}' mode='aspectFill' class='movie-img'></image>
+      <view class='movie-text'>
+        <text class='movie-title'>{{item.title}}</text>
+        <text class='movie-subtitle'>{{item.title + '(' + item.year + ')'}}</text>
+        <text class='artists'><block wx:for='{{item.directors}}' wx:key="id"></block>{{item.directors[0].name}}</text>
+      </view>
+      <view class='score'>
+        <text class='sore-text'>{{item.rating.average}}</text>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if='{{!hasMore}}' class='bottom-text'>
+    <text>{{warning}}</text>
+  </view>
+</template>

@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/logs/logs",
+    "pages/item/item",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarTitleText": "豆瓣电影",
+    "navigationBarBackgroundColor": "#009900",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "images/boom.png",
+        "selectedIconPath": "images/boom2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine2.png"
+      }
+    ]
+  }
+}

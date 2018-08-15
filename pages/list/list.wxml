@@ -1,0 +1,4 @@
+<import src='../common/movie-list.wxml'></import>
+<view class='movie'>
+  <template is="movie-list" data="{{movieList, hasMore, warning}}"></template>
+</view>

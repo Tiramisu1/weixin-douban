@@ -1,0 +1,13 @@
+<view class='header'>
+  <view class='header-search'>
+    <icon type='search' size='15' class='search-icon' bindtap='searchMovie'></icon>
+    <input type='text' value='{{search}}' confirm-type='search' placeholder='请输入搜索内容...' class='search-text' placeholder-class='placeholder' bindconfirm='searchMovie'></input>
+  </view>
+  <view class='clear' bindtap='clearSearch'>
+    <view>取消</view>
+  </view>
+</view>
+<import src='../common/movie-list.wxml'></import>
+<view class='movie'>
+  <template is='movie-list' data='{{movieList, hasmore, warning}}'></template>
+</view>

@@ -1,0 +1,68 @@
+.movie-item {
+  display: flex;
+  padding: 20rpx 40rpx;
+  position: relative;
+  border-bottom: 1rpx solid #e6e6e6;
+  font-size: 0;
+}
+
+.movie-img {
+  width: 140rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+}
+
+.movie-text {
+  flex: 1;
+}
+
+.movie-title {
+  display: block;
+  margin-bottom: 20rpx;
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.movie-subtitle {
+  display: block;
+  margin-bottom: 20rpx;
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #c0c0c0;
+}
+
+.artists {
+  display: block;
+  font-size: 14px;
+  color: #999;
+}
+
+.score {
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+  width: 40rpx;
+  padding: 8rpx 10rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  background: rgba(247, 76, 49, 0.8);
+  color: #fff;
+}
+
+.sore-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+.bottom-text{
+  margin: 40rpx 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}

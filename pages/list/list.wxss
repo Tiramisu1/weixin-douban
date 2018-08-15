@@ -1,0 +1,7 @@
+@import '../common/movie-list.wxss';
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+}
